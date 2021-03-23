@@ -29,7 +29,7 @@ private static final Logger logger = LoggerFactory.getLogger(WordController.clas
 
 	@PostMapping(value = { "/getCountOfGivenWords" })
 	public Map<String, Integer> getCountOfGivenWords(@RequestBody RequestTo searchText) {
-		logger.info("req paylaod{} ", searchText.toString());
+		logger.info("req paylaod{} is ", searchText.toString());
 		return wordService.getCountOfGivenWords(searchText.getSearchText());
 	}
 	
